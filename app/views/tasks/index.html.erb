@@ -1,0 +1,31 @@
+<h1>任務列表</h1>
+<%= link_to "新增任務", new_task_path %>
+<%= link_to "標籤列表", tags_path %>
+
+<table>
+  <thead>
+    <tr>
+      <td>任務持有人：</td>
+      <td>任務名稱：</td>
+      <td>任務內容：</td>
+      <td>優先權：</td>
+      <td>功能：</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.user_id %></td>
+      <td><%= task.title %></td>
+      <td><%= task.content %></td>
+      <td><%= task.priority %></td>
+      <td>
+      <%= link_to "編輯", edit_task_path(task) %>
+      <%= link_to "刪除", task_path(task), method: "delete", data: { confirm: "確認刪除?" } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "回使用者列表", users_path %>

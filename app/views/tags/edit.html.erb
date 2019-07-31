@@ -1,0 +1,13 @@
+<h1>編輯標籤</h1>
+
+<% if @tag.errors.any? %>
+  <ul>
+  <% @tag.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= render "form", tag: @tag %>
+
+<%= link_to "回標籤列表", tags_path %>

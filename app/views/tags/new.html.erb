@@ -1,0 +1,23 @@
+<h1>新增標籤</h1>
+
+<% if @tag.errors.any? %>
+  <ul>
+  <% @tag.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for(Tag.new) do |form| %>
+
+	<div>
+	<%= form.label :label, '標籤名稱' %>
+	<%= form.text_field :label %>
+	</div>
+
+<input type="submit" value="新增">
+
+<% end %>
+
+<%= link_to "回標籤列表", tags_path %>

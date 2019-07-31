@@ -1,0 +1,13 @@
+<h1>編輯任務</h1>
+
+<% if @task.errors.any? %>
+  <ul>
+  <% @task.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= render "form", task: @task %>
+
+<%= link_to "回任務列表", tasks_path %>
