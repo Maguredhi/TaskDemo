@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'tasks#index'
 
-  resources :tasks
+  scope "(:locale)" do
+    resources :tasks
+  end
 end

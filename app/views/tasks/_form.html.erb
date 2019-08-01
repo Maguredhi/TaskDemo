@@ -1,21 +1,21 @@
 <%= form_for(task) do |form| %>
 	<div>
-	<%= form.label :user_id, '使用者ID' %>
+	<%= form.label :user_id, t('task.holder') %>
 	<%= form.text_field :user_id %>
 	</div>
 
 	<div>
-	<%= form.label :title, '任務名稱' %>
+	<%= form.label :title, t('task.title') %>
 	<%= form.text_field :title %>
 	</div>
 
 	<div>
-	<%= form.label :content, '任務內容' %>
+	<%= form.label :content, t('task.content') %>
 	<%= form.text_area :content %>
 	</div>
 
     <div>
-	<%= form.label :priority, '優先權' %>
+	<%= form.label :priority, t('task.priority') %>
 	<%= form.text_field :priority %>
 	</div>
 

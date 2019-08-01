@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Maguredhi/TaskDemo.svg?branch=topic)](https://travis-ci.org/Maguredhi/TaskDemo)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
