@@ -1,6 +1,14 @@
 language: ruby
 rvm:
-  - 2.6.0
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+script:
+script:
+  - bundle exec rails db:setup
+  - bundle exec rails spec
+cache: bundler
 services:
   - postgresql
 before_script:

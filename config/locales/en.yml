@@ -14,6 +14,7 @@ en:
    title: 'Task：'
    content: 'Content：'
    priority: 'Priority：'
+   time: 'Created at：'
    option: 'Option：'
    edit: Edit
    destroy: Destroy
