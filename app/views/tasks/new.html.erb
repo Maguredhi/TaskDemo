@@ -1,4 +1,4 @@
-<h1>新增任務</h1>
+<h1><%= t('task.new')%></h1>
 
 <% if @task.errors.any? %>
   <ul>
@@ -10,4 +10,4 @@
 
 <%= render "form", task: @task %>
 
-<%= link_to "回任務列表", tasks_path %>
+<%= link_to t("task.back"), tasks_path %>

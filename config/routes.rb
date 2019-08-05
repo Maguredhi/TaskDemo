@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
   root 'tasks#index'
 
-  resources :tasks
-  resources :tags
-
+  scope "(:locale)" do
+    resources :tasks
+  end
 end

@@ -3,3 +3,4 @@ class RemoveTaskIdToTags < ActiveRecord::Migration[5.2]
     remove_column :tags, :task_id
   end
 end
+

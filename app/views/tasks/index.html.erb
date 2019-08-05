@@ -1,15 +1,15 @@
-<h1>任務列表</h1>
-<%= link_to "新增任務", new_task_path %>
-<%= link_to "標籤列表", tags_path %>
+<h1><%= t('task.list') %></h1>
+<%= link_to t('task.new'), new_task_path %>
 
 <table>
   <thead>
     <tr>
-      <td>任務持有人：</td>
-      <td>任務名稱：</td>
-      <td>任務內容：</td>
-      <td>優先權：</td>
-      <td>功能：</td>
+      <td><%= t('task.holder') %></td>
+      <td><%= t('task.title') %></td>
+      <td><%= t('task.content') %></td>
+      <td><%= t('task.priority') %></td>
+      <td><%= t('task.time') %></td>
+      <td><%= t('task.option') %></td>
     </tr>
   </thead>
   <tbody>
@@ -19,13 +19,19 @@
       <td><%= task.title %></td>
       <td><%= task.content %></td>
       <td><%= task.priority %></td>
+      <td><%= task.created_at %></td>
       <td>
-      <%= link_to "編輯", edit_task_path(task) %>
-      <%= link_to "刪除", task_path(task), method: "delete", data: { confirm: "確認刪除?" } %>
+        <%= link_to t("task.edit"), edit_task_path(task) %>
+        <%= link_to t("task.destroy"), task_path(task), method: "delete", data: { confirm: t("task.alert") } %>
       </td>
     </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "回使用者列表", users_path %>
+
+      <% if I18n.locale.to_s == "en" %>
+        <%= link_to('中文', :locale => 'zh-TW') %>
+       <% else %>
+        <%= link_to('English', :locale => 'en') %>
+       <% end %>
